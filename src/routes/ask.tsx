@@ -239,10 +239,9 @@ function Ask() {
                       <SelectValue placeholder="Select a query type" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="Auto-detect">Auto-detect from my question</SelectItem>
                       {QUERY_TYPES.map((t) => (
                         <SelectItem key={t} value={t}>
-                          {t}
+                          {t === "Auto-detect" ? "Auto-detect from my question" : t}
                         </SelectItem>
                       ))}
                     </SelectContent>
