@@ -21,6 +21,7 @@ import { Route as GovernanceRouteImport } from './routes/governance'
 import { Route as ShopRouteImport } from './routes/shop'
 import { Route as OrderConfirmedOrderIdRouteImport } from './routes/order-confirmed.$orderId'
 import { Route as ProductSlugRouteImport } from './routes/product.$slug'
+import { Route as ApiPublicCustomerQueryRouteImport } from './routes/api/public/customer-query'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -82,6 +83,11 @@ const ProductSlugRoute = ProductSlugRouteImport.update({
   path: '/product/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiPublicCustomerQueryRoute = ApiPublicCustomerQueryRouteImport.update({
+  id: '/api/public/customer-query',
+  path: '/api/public/customer-query',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -96,6 +102,7 @@ export interface FileRoutesByFullPath {
   '/shop': typeof ShopRoute
   '/order-confirmed/$orderId': typeof OrderConfirmedOrderIdRoute
   '/product/$slug': typeof ProductSlugRoute
+  '/api/public/customer-query': typeof ApiPublicCustomerQueryRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -110,6 +117,7 @@ export interface FileRoutesByTo {
   '/shop': typeof ShopRoute
   '/order-confirmed/$orderId': typeof OrderConfirmedOrderIdRoute
   '/product/$slug': typeof ProductSlugRoute
+  '/api/public/customer-query': typeof ApiPublicCustomerQueryRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -125,6 +133,7 @@ export interface FileRoutesById {
   '/shop': typeof ShopRoute
   '/order-confirmed/$orderId': typeof OrderConfirmedOrderIdRoute
   '/product/$slug': typeof ProductSlugRoute
+  '/api/public/customer-query': typeof ApiPublicCustomerQueryRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -141,6 +150,7 @@ export interface FileRouteTypes {
     | '/shop'
     | '/order-confirmed/$orderId'
     | '/product/$slug'
+    | '/api/public/customer-query'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -155,6 +165,7 @@ export interface FileRouteTypes {
     | '/shop'
     | '/order-confirmed/$orderId'
     | '/product/$slug'
+    | '/api/public/customer-query'
   id:
     | '__root__'
     | '/'
@@ -169,6 +180,7 @@ export interface FileRouteTypes {
     | '/shop'
     | '/order-confirmed/$orderId'
     | '/product/$slug'
+    | '/api/public/customer-query'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -184,6 +196,7 @@ export interface RootRouteChildren {
   ShopRoute: typeof ShopRoute
   OrderConfirmedOrderIdRoute: typeof OrderConfirmedOrderIdRoute
   ProductSlugRoute: typeof ProductSlugRoute
+  ApiPublicCustomerQueryRoute: typeof ApiPublicCustomerQueryRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -272,6 +285,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProductSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/customer-query': {
+      id: '/api/public/customer-query'
+      path: '/api/public/customer-query'
+      fullPath: '/api/public/customer-query'
+      preLoaderRoute: typeof ApiPublicCustomerQueryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -288,6 +308,7 @@ const rootRouteChildren: RootRouteChildren = {
   ShopRoute: ShopRoute,
   OrderConfirmedOrderIdRoute: OrderConfirmedOrderIdRoute,
   ProductSlugRoute: ProductSlugRoute,
+  ApiPublicCustomerQueryRoute: ApiPublicCustomerQueryRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
