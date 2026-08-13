@@ -10,33 +10,193 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as AccountRouteImport } from './routes/account'
+import { Route as AskRouteImport } from './routes/ask'
+import { Route as CartRouteImport } from './routes/cart'
+import { Route as CheckoutRouteImport } from './routes/checkout'
+import { Route as DashboardRouteImport } from './routes/dashboard'
+import { Route as DealsRouteImport } from './routes/deals'
+import { Route as GovernanceRouteImport } from './routes/governance'
+import { Route as ShopRouteImport } from './routes/shop'
+import { Route as OrderConfirmedOrderIdRouteImport } from './routes/order-confirmed.$orderId'
+import { Route as ProductSlugRouteImport } from './routes/product.$slug'
+import { Route as ApiPublicCustomerQueryRouteImport } from './routes/api/public/customer-query'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AccountRoute = AccountRouteImport.update({
+  id: '/account',
+  path: '/account',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AskRoute = AskRouteImport.update({
+  id: '/ask',
+  path: '/ask',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CartRoute = CartRouteImport.update({
+  id: '/cart',
+  path: '/cart',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CheckoutRoute = CheckoutRouteImport.update({
+  id: '/checkout',
+  path: '/checkout',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardRoute = DashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DealsRoute = DealsRouteImport.update({
+  id: '/deals',
+  path: '/deals',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GovernanceRoute = GovernanceRouteImport.update({
+  id: '/governance',
+  path: '/governance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopRoute = ShopRouteImport.update({
+  id: '/shop',
+  path: '/shop',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OrderConfirmedOrderIdRoute = OrderConfirmedOrderIdRouteImport.update({
+  id: '/order-confirmed/$orderId',
+  path: '/order-confirmed/$orderId',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProductSlugRoute = ProductSlugRouteImport.update({
+  id: '/product/$slug',
+  path: '/product/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiPublicCustomerQueryRoute = ApiPublicCustomerQueryRouteImport.update({
+  id: '/api/public/customer-query',
+  path: '/api/public/customer-query',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/account': typeof AccountRoute
+  '/ask': typeof AskRoute
+  '/cart': typeof CartRoute
+  '/checkout': typeof CheckoutRoute
+  '/dashboard': typeof DashboardRoute
+  '/deals': typeof DealsRoute
+  '/governance': typeof GovernanceRoute
+  '/shop': typeof ShopRoute
+  '/order-confirmed/$orderId': typeof OrderConfirmedOrderIdRoute
+  '/product/$slug': typeof ProductSlugRoute
+  '/api/public/customer-query': typeof ApiPublicCustomerQueryRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/account': typeof AccountRoute
+  '/ask': typeof AskRoute
+  '/cart': typeof CartRoute
+  '/checkout': typeof CheckoutRoute
+  '/dashboard': typeof DashboardRoute
+  '/deals': typeof DealsRoute
+  '/governance': typeof GovernanceRoute
+  '/shop': typeof ShopRoute
+  '/order-confirmed/$orderId': typeof OrderConfirmedOrderIdRoute
+  '/product/$slug': typeof ProductSlugRoute
+  '/api/public/customer-query': typeof ApiPublicCustomerQueryRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/account': typeof AccountRoute
+  '/ask': typeof AskRoute
+  '/cart': typeof CartRoute
+  '/checkout': typeof CheckoutRoute
+  '/dashboard': typeof DashboardRoute
+  '/deals': typeof DealsRoute
+  '/governance': typeof GovernanceRoute
+  '/shop': typeof ShopRoute
+  '/order-confirmed/$orderId': typeof OrderConfirmedOrderIdRoute
+  '/product/$slug': typeof ProductSlugRoute
+  '/api/public/customer-query': typeof ApiPublicCustomerQueryRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/account'
+    | '/ask'
+    | '/cart'
+    | '/checkout'
+    | '/dashboard'
+    | '/deals'
+    | '/governance'
+    | '/shop'
+    | '/order-confirmed/$orderId'
+    | '/product/$slug'
+    | '/api/public/customer-query'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/account'
+    | '/ask'
+    | '/cart'
+    | '/checkout'
+    | '/dashboard'
+    | '/deals'
+    | '/governance'
+    | '/shop'
+    | '/order-confirmed/$orderId'
+    | '/product/$slug'
+    | '/api/public/customer-query'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/account'
+    | '/ask'
+    | '/cart'
+    | '/checkout'
+    | '/dashboard'
+    | '/deals'
+    | '/governance'
+    | '/shop'
+    | '/order-confirmed/$orderId'
+    | '/product/$slug'
+    | '/api/public/customer-query'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  AccountRoute: typeof AccountRoute
+  AskRoute: typeof AskRoute
+  CartRoute: typeof CartRoute
+  CheckoutRoute: typeof CheckoutRoute
+  DashboardRoute: typeof DashboardRoute
+  DealsRoute: typeof DealsRoute
+  GovernanceRoute: typeof GovernanceRoute
+  ShopRoute: typeof ShopRoute
+  OrderConfirmedOrderIdRoute: typeof OrderConfirmedOrderIdRoute
+  ProductSlugRoute: typeof ProductSlugRoute
+  ApiPublicCustomerQueryRoute: typeof ApiPublicCustomerQueryRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +208,107 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/account': {
+      id: '/account'
+      path: '/account'
+      fullPath: '/account'
+      preLoaderRoute: typeof AccountRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ask': {
+      id: '/ask'
+      path: '/ask'
+      fullPath: '/ask'
+      preLoaderRoute: typeof AskRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cart': {
+      id: '/cart'
+      path: '/cart'
+      fullPath: '/cart'
+      preLoaderRoute: typeof CartRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/checkout': {
+      id: '/checkout'
+      path: '/checkout'
+      fullPath: '/checkout'
+      preLoaderRoute: typeof CheckoutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard': {
+      id: '/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof DashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/deals': {
+      id: '/deals'
+      path: '/deals'
+      fullPath: '/deals'
+      preLoaderRoute: typeof DealsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/governance': {
+      id: '/governance'
+      path: '/governance'
+      fullPath: '/governance'
+      preLoaderRoute: typeof GovernanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shop': {
+      id: '/shop'
+      path: '/shop'
+      fullPath: '/shop'
+      preLoaderRoute: typeof ShopRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/order-confirmed/$orderId': {
+      id: '/order-confirmed/$orderId'
+      path: '/order-confirmed/$orderId'
+      fullPath: '/order-confirmed/$orderId'
+      preLoaderRoute: typeof OrderConfirmedOrderIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/product/$slug': {
+      id: '/product/$slug'
+      path: '/product/$slug'
+      fullPath: '/product/$slug'
+      preLoaderRoute: typeof ProductSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/customer-query': {
+      id: '/api/public/customer-query'
+      path: '/api/public/customer-query'
+      fullPath: '/api/public/customer-query'
+      preLoaderRoute: typeof ApiPublicCustomerQueryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  AccountRoute: AccountRoute,
+  AskRoute: AskRoute,
+  CartRoute: CartRoute,
+  CheckoutRoute: CheckoutRoute,
+  DashboardRoute: DashboardRoute,
+  DealsRoute: DealsRoute,
+  GovernanceRoute: GovernanceRoute,
+  ShopRoute: ShopRoute,
+  OrderConfirmedOrderIdRoute: OrderConfirmedOrderIdRoute,
+  ProductSlugRoute: ProductSlugRoute,
+  ApiPublicCustomerQueryRoute: ApiPublicCustomerQueryRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
