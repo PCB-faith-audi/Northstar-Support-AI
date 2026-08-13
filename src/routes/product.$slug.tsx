@@ -137,7 +137,7 @@ function ProductDetail() {
                       v.stock === 0 && "cursor-not-allowed text-muted-foreground line-through",
                     )}
                   >
-                    {v.label}
+                    {v.value}
                   </button>
                 ))}
               </div>

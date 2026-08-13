@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { z } from "zod";
 
+import type { Order } from "@/lib/northstar/data";
 import { buildEmail, runDeflection } from "@/lib/northstar/deflection";
 
 /**
@@ -104,6 +105,8 @@ export const Route = createFileRoute("/api/public/customer-query")({
           }
         }
 
+        const sessionOrders = (body.sessionOrders ?? []) as unknown as Order[];
+
         const result = runDeflection({
           name: body.name,
           email: body.email,
@@ -111,11 +114,10 @@ export const Route = createFileRoute("/api/public/customer-query")({
           orderNumber: body.orderNumber,
           question: body.question,
           automationEnabled: body.automationEnabled ?? true,
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          sessionOrders: (body.sessionOrders ?? []) as any,
+          sessionOrders,
         });
 
-        const email = buildEmail({ ...body, reference }, result);
+        const email = buildEmail({ ...body, sessionOrders, reference }, result);
 
         return Response.json({
           ok: true,
