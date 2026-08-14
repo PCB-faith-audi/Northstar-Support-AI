@@ -1,44 +1,61 @@
-# Northstar Assistant
+# Northstar Helper Bot
 
 # NORTHSTAR SPRINT — SUPPORT DEFLECTION MVP
 
-## Role and Mission
+> **Quality Finds. Delivered.**
 
-Act as a **senior full-stack software engineer, AI automation specialist, customer-support systems architect, supply chain technology consultant, UX/UI designer, and responsible AI practitioner**.
+Northstar Helper Bot is a collaborative, high-fidelity **Support Deflection MVP** built for **Northstar Retail Co.**, a fictional mid-sized e-commerce company whose customer-support team is overwhelmed by repetitive customer requests.
 
-You have been engaged by **Northstar Retail Co.**, a fictional mid-sized e-commerce company whose customer-support team is overwhelmed by repetitive tickets.
+The project demonstrates how a modern e-commerce experience can combine shopping functionality with an **AI-ready customer support assistant, automated support workflows, responsible escalation, and operational visibility**.
 
-Your mission is to design and build a polished, high-fidelity **Support Deflection MVP** that reduces unnecessary manual support work while providing customers with fast, clear, responsible, and useful assistance.
-
-The MVP must combine:
-
-1. A professional e-commerce website prototype.
-2. An AI-ready customer query assistant called **Ask Northstar**.
-3. Automated support workflows for repetitive customer questions.
-4. A lightweight support/operations dashboard for monitoring queries and automation outcomes.
-5. A future-ready integration architecture for:
-
-**Northstar Website → API/Webhook → n8n → AI Processing → Product/Order Data → Email Response → Customer**
-
-The solution must be demoable end-to-end using realistic mock data.
+The application is designed and developed using **Lovable**, with the project source managed through **GitHub** and prepared for deployment through **Vercel**.
 
 ---
 
-# 1. CLIENT CONTEXT
+## 📌 Project Overview
 
-## The Client
+Northstar Retail Co. needs to reduce the amount of repetitive work handled manually by its customer-support team.
 
-**Northstar Retail Co.**
+The MVP focuses on three major support categories:
 
-A modern mid-sized e-commerce retailer.
+1. **Order Status**
+2. **Returns & Refunds**
+3. **Stock Availability**
 
-### Tagline
+The central principle of the project is:
+
+> **Simple, repetitive, low-risk customer questions should be resolved automatically whenever possible, while uncertain, unusual, sensitive, or higher-risk cases should be clearly escalated to human support.**
+
+The goal is not to automate everything blindly, but to demonstrate a responsible and practical approach to **support deflection**.
+
+---
+
+# 🎯 Project Mission
+
+The Northstar team was tasked with designing and building a polished e-commerce and customer-support experience that demonstrates how automation can reduce repetitive support workload while maintaining:
+
+* Transparency
+* Human oversight
+* Customer privacy
+* Responsible automation
+* Clear escalation
+* Operational visibility
+* Auditability
+* A path toward future production integration
+
+---
+
+# 🏢 Client
+
+## Northstar Retail Co.
+
+Northstar Retail Co. is a fictional modern mid-sized e-commerce retailer.
+
+### Brand Tagline
 
 **Quality Finds. Delivered.**
 
 ### Brand Personality
-
-The brand should feel:
 
 * Modern
 * Premium
@@ -50,11 +67,11 @@ The brand should feel:
 
 ### Visual Identity
 
-Use a polished design system featuring:
+The interface uses a polished retail design system featuring:
 
 * Deep navy
 * White
-* Warm gold or amber accents
+* Warm gold/amber accents
 * Soft gray surfaces
 * Dark readable text
 * Subtle shadows
@@ -62,7 +79,7 @@ Use a polished design system featuring:
 * Clean modern typography
 * High-quality product imagery
 
-The final product must look like a credible retail technology solution suitable for demonstration to:
+The goal is to create a credible product that could be demonstrated to:
 
 * Clients
 * Investors
@@ -72,234 +89,132 @@ The final product must look like a credible retail technology solution suitable 
 * Operations teams
 * Customer-support leadership
 
-Do not create a generic template. Build a cohesive, realistic retail experience.
+---
+
+# 💡 Business Problem
+
+Northstar's customer-support team receives many repetitive questions that can potentially be resolved without manual intervention.
+
+### 1. Order Status
+
+Customers may ask:
+
+* Where is my order?
+* Has my order shipped?
+* When will my order arrive?
+* What is happening with my order?
+
+Example:
+
+> **Order NS-2026-10482 is currently Out for Delivery. Estimated delivery: Today.**
 
 ---
 
-# 2. BUSINESS PROBLEM
+### 2. Returns & Refunds
 
-Northstar's support team is overwhelmed by three repetitive ticket categories:
+Customers may ask:
 
-## A. Order Status
+* How do I return an item?
+* Can I return my product?
+* When will I receive my refund?
+* What is the return policy?
 
-Typical customer questions include:
-
-* "Where is my order?"
-* "Has my order shipped yet?"
-* "When will my order arrive?"
-* "What is happening with order NS-2026-10482?"
-
-The system should use mock order data to provide useful responses such as:
-
-> Order NS-2026-10482 is currently **Out for Delivery**.
-> Estimated delivery: **Today**.
+The system provides prototype guidance while identifying situations that should be escalated to human support.
 
 ---
 
-## B. Returns and Refunds
+### 3. Stock Availability
 
-Typical customer questions include:
+Customers may ask:
 
-* "How do I return this?"
-* "Can I return my product?"
-* "When will I receive my refund?"
-* "What is your return policy?"
+* Is this product available?
+* Do you have another size?
+* Do you have another colour?
+* When will this product be available?
 
-The system should provide clear prototype return guidance and identify cases that require escalation to a human support agent.
-
----
-
-## C. Stock Availability
-
-Typical customer questions include:
-
-* "Is this back in stock?"
-* "Do you have this in a different size?"
-* "When will this item be available?"
-* "Do you have another colour?"
-
-The system should use the mock product catalog and inventory data to answer availability questions and, where possible, recommend alternatives.
+The system uses mock product and inventory data to provide availability information and, where appropriate, alternatives.
 
 ---
 
-# 3. PRODUCT DEFINITION
+# 🛍️ Product Experience
 
-Build:
+The MVP includes a complete prototype customer shopping journey:
 
-# NORTHSTAR SUPPORT DEFLECTION MVP
+```text
+Homepage
+   ↓
+Browse Products
+   ↓
+Search / Filter
+   ↓
+Product Details
+   ↓
+Add to Cart
+   ↓
+Checkout
+   ↓
+Order Confirmation
+```
 
-The MVP is an **AI-assisted customer support and e-commerce experience** designed to reduce repetitive manual ticket handling.
+The support journey operates alongside the shopping experience:
 
-The solution must support at least **two of the three priority ticket categories**, with the preferred implementation supporting all three:
-
-1. Order status
-2. Returns and refunds
-3. Stock availability
-
-The system must demonstrate the following principle:
-
-> **Simple, repetitive, low-risk questions should be resolved automatically whenever possible, while uncertain, sensitive, unusual, or high-risk cases should be clearly escalated to a human.**
-
-Do not build a system that blindly automates every decision.
-
----
-
-# 4. CORE CUSTOMER EXPERIENCE
-
-Build a polished responsive e-commerce website for Northstar Retail Co.
-
-The primary customer journey must work end-to-end:
-
-**Homepage**
-
-↓
-
-**Browse Products**
-
-↓
-
-**Search or Filter Products**
-
-↓
-
-**Product Details**
-
-↓
-
-**Add to Cart**
-
-↓
-
-**Checkout**
-
-↓
-
-**Order Confirmation**
-
-In parallel, demonstrate the support journey:
-
-**Customer**
-
-↓
-
-**Ask Northstar**
-
-↓
-
-**Enter Name and Email**
-
-↓
-
-**Select or Automatically Determine Query Type**
-
-↓
-
-**Enter Question**
-
-↓
-
-**System Validates Request**
-
-↓
-
-**Relevant Mock Product, Order, Return, or Inventory Data Is Checked**
-
-↓
-
-**Automated Response Is Generated**
-
-↓
-
-**Response Is Displayed or Prepared for Email**
-
-↓
-
-**Customer Receives or Simulates Receiving Email Response**
-
-↓
-
-**Query Is Logged in the Support Dashboard**
-
-↓
-
-**Uncertain or Exceptional Cases Are Escalated to Human Support**
+```text
+Customer
+   ↓
+Ask Northstar
+   ↓
+Submit Support Query
+   ↓
+Validate Request
+   ↓
+Check Relevant Mock Data
+   ↓
+Generate Response
+   ↓
+Resolve or Escalate
+   ↓
+Log Outcome
+```
 
 ---
 
-# 5. HOMEPAGE
+# 🏠 Homepage
 
-Create a premium responsive homepage.
+The Northstar homepage provides:
 
-## Sticky Header
-
-Display:
-
-**NORTHSTAR**
-
-Navigation:
-
-* Home
-* Shop
-* Categories
-* Deals
-* New Arrivals
-* About
-* Contact
-
-Include:
-
+* Responsive navigation
+* Product discovery
 * Search
 * Wishlist
-* Account
-* Cart
+* Account access
+* Shopping cart
+* Promotional content
+* Deals
+* Category discovery
+* Ask Northstar support entry point
 
-The navigation must be responsive and convert into a mobile-friendly hamburger menu.
+### Hero Section
 
----
+**Find What Moves You.**
 
-# 6. HERO SECTION
-
-Headline:
-
-# Find What Moves You.
-
-Supporting text:
-
-**Discover quality products, everyday essentials, and great deals — all in one place.**
+> Discover quality products, everyday essentials, and great deals — all in one place.
 
 Primary actions:
 
 * Shop Now
 * Explore Deals
 
-Include a premium lifestyle or product-focused visual.
+The homepage also prominently introduces:
 
-Also include a visually prominent support entry point:
+## Ask Northstar
 
-### Ask Northstar
-
-**Need help with an order, return, refund, or product availability? Ask Northstar and get a fast response.**
+> **Need help with an order, return, refund, or product availability? Ask Northstar and get a fast response.**
 
 ---
 
-# 7. SHOP BY CATEGORY
+# 🛒 Product Catalog
 
-Create six clickable category cards:
-
-* Electronics
-* Fashion
-* Home & Living
-* Beauty
-* Sports & Fitness
-* Accessories
-
----
-
-# 8. PRODUCT CATALOG
-
-Display at least eight realistic products.
-
-Include examples such as:
+The MVP includes realistic mock products such as:
 
 * Northstar Wireless Headphones
 * Urban Essential Backpack
@@ -310,34 +225,32 @@ Include examples such as:
 * Portable Bluetooth Speaker
 * Smart LED Light
 
-Each product must include:
+Products include:
 
-* Product image
-* Product name
+* Product imagery
+* Name
 * Price
 * Original price where applicable
 * Rating
-* Sale badge where applicable
+* Sale badges
 * Stock status
-* Wishlist action
-* Add to Cart action
+* Wishlist actions
+* Add-to-cart actions
 
-Use realistic mock inventory states, including:
+### Mock Inventory States
 
 * In Stock
 * Low Stock
 * Out of Stock
 * Restocking Soon
 
-This inventory information must be reusable by the support-deflection system.
+The inventory information is reusable by the support-deflection experience.
 
 ---
 
-# 9. PRODUCT SEARCH AND FILTERING
+# 🔎 Search & Filtering
 
-Create a functional prototype search experience.
-
-Support searches such as:
+Customers can search the product catalog using terms such as:
 
 * Headphones
 * Sneakers
@@ -346,56 +259,48 @@ Support searches such as:
 * Gifts
 * Speakers
 
-Include filters for:
+Filtering includes:
 
 * Category
 * Price
 * Rating
 * Availability
 
-Include sorting:
+Sorting includes:
 
 * Featured
 * Price: Low to High
 * Price: High to Low
 * Best Rated
 
-All search and filtering should use the mock product catalog.
-
 ---
 
-# 10. PRODUCT DETAIL PAGE
+# 📦 Product Details
 
-Each product detail page should include:
+Product pages provide:
 
 * Product gallery
 * Product name
 * Rating
 * Reviews
 * Price
-* Sale price where applicable
+* Sale price
 * Description
 * Specifications
 * Stock status
-* Available variations where applicable
+* Product variations
 * Quantity selector
 * Add to Cart
 * Buy Now
 * Wishlist
 
-Include:
-
-# You May Also Like
-
-Display four related products.
+A **You May Also Like** section provides related products.
 
 ---
 
-# 11. SHOPPING CART AND CHECKOUT
+# 🛍️ Cart & Checkout
 
-Create a functional frontend cart.
-
-Customers should be able to:
+Customers can:
 
 * Add products
 * Remove products
@@ -403,15 +308,10 @@ Customers should be able to:
 * View subtotal
 * View delivery cost
 * View total
+* Continue shopping
+* Proceed to checkout
 
-Include:
-
-* Continue Shopping
-* Proceed to Checkout
-
-Create a mock checkout experience.
-
-Collect:
+The checkout is a **prototype only** and does not process real payments.
 
 ### Customer Information
 
@@ -419,369 +319,159 @@ Collect:
 * Email
 * Phone
 
-### Delivery
+### Delivery Information
 
 * Address
 * City
 * Province/Region
 * Postal Code
 
-### Delivery Method
+### Delivery Methods
 
 * Standard Delivery
 * Express Delivery
 
-### Payment
-
-Display mock payment options:
+### Mock Payment Methods
 
 * Credit/Debit Card
 * EFT/Bank Transfer
 * Digital Wallet
 
-Do not process real payments.
+After checkout, the customer receives a mock order confirmation.
 
-After placing an order, display:
+Example:
 
-# Order Confirmed 🎉
+**Order: NS-2026-10482**
 
-**Thank you for shopping with Northstar Retail Co.**
+**Estimated delivery: 3–5 business days**
 
-Example order:
-
-**NS-2026-10482**
-
-Estimated delivery:
-
-**3–5 business days**
-
-The order must then become available within the mock order data used by the support automation.
+The generated mock order can subsequently be used by the support experience.
 
 ---
 
-# 12. ASK NORTHSTAR — PRIMARY SUPPORT DEFLECTION FEATURE
+# 🤖 Ask Northstar
 
-Create a visually prominent customer-support feature called:
+## Primary Support Deflection Feature
 
-# Ask Northstar
+**Ask Northstar** is the central support experience of the MVP.
 
-Supporting text:
+Customers can ask questions about:
 
-**Have a question about a product, order, delivery, return, refund, or availability? Send us a message and we'll help you find the answer.**
-
-Create a professional query form containing:
-
-### Name
-
-Placeholder:
-
-**Your name**
-
-### Email
-
-Placeholder:
-
-**[you@example.com](mailto:you@example.com)**
-
-### Query Type
-
-Include:
-
-* Order Status
+* Orders
 * Shipping
-* Returns & Refunds
-* Stock Availability
-* Product Question
-* Product Recommendation
-* Payment
-* General Question
+* Returns
+* Refunds
+* Stock availability
+* Products
+* Recommendations
+* Payments
+* General questions
 
-### Order Number
+### Query Form
 
-Optional where relevant.
+The form includes:
 
-### Your Question
+* Name
+* Email
+* Query Type
+* Order Number where applicable
+* Customer Question
 
-Large textarea:
-
-**How can we help you?**
-
-Button:
-
-# Send Query
-
----
-
-# 13. QUERY VALIDATION AND CUSTOMER EXPERIENCE
-
-When the customer submits a query, validate:
-
-* Name is required
-* Email is required
-* Email format is valid
-* Query type is required
-* Question is required
-
-Show:
-
-**Sending your query...**
-
-Then generate a unique query reference such as:
+The customer receives a unique query reference such as:
 
 **NSQ-2026-10482**
 
-After successful submission, display:
+After submission:
 
-# Query Received ✓
+> **Query Received ✓**
 
-**Thanks, [Customer Name]. We've received your question.**
+The customer receives confirmation that their request has been received and that a response will be provided through the prototype workflow.
 
-**Reference: [Query Reference Number]**
-
-**We'll send our response to [Customer Email].**
-
-Provide:
-
-* Continue Shopping
-* View Query Status
-
-Do not publicly expose customer information.
+Customer information is not intended to be publicly exposed.
 
 ---
 
-# 14. SUPPORT AUTOMATION LOGIC
+# ⚙️ Support Automation
 
-The system should attempt to resolve repetitive, low-risk queries automatically.
+The MVP uses **Lovable-based application logic and realistic mock data** to demonstrate support automation.
 
-## Order Status Flow
+No n8n workflow is required for the current MVP.
+
+No external automation platform is required for the current demonstration.
+
+## Order Status
 
 Example:
-
-**Customer:**
 
 > Where is my order NS-2026-10482?
 
-System:
+The system:
 
 1. Validates the order number.
-2. Looks up mock order data.
-3. Returns the current status.
-4. Provides an estimated delivery date where available.
-5. Escalates when the order cannot be found or the information is uncertain.
-
-Example response:
-
-> Your order NS-2026-10482 is currently Out for Delivery. Estimated delivery: Today.
+2. Checks the mock order data.
+3. Determines the order status.
+4. Provides available delivery information.
+5. Escalates when the order cannot be confidently matched.
 
 ---
 
-## Returns and Refunds Flow
+## Returns & Refunds
 
 Example:
-
-**Customer:**
 
 > How do I return this item?
 
-System:
+The system:
 
 1. Identifies the request.
-2. Provides applicable return instructions.
-3. Explains refund timelines using the prototype policy.
+2. Provides prototype return guidance.
+3. Explains the applicable prototype refund process.
 4. Escalates exceptions or ambiguous cases.
-
-Example:
-
-> You can request a return within the eligible return period. Once your item is received and inspected, the refund will be processed according to the selected payment method and the applicable policy.
 
 ---
 
-## Stock Availability Flow
+## Stock Availability
 
 Example:
 
-**Customer:**
-
 > Do you have the Everyday Sneakers in size 42?
 
-System:
+The system:
 
 1. Identifies the product.
 2. Checks mock inventory.
 3. Returns availability.
-4. Suggests an alternative when unavailable.
-5. Avoids promising restock dates unless the mock data explicitly contains one.
+4. Suggests alternatives where appropriate.
+5. Avoids making unsupported restock promises.
+
+---
+
+# 👩‍💼 Human Escalation
+
+Automation should not attempt to resolve every situation.
+
+The system can identify cases that require human review, including:
+
+* Unmatched orders
+* Conflicting information
+* Exceptional refund cases
+* Unusual requests
+* Low-confidence responses
+* Situations requiring human judgment
 
 Example:
 
-> Size 42 is currently out of stock. We have size 41 and 43 available, and similar styles are available in the Fashion category.
+> **We couldn't confidently resolve this request automatically. Your query has been flagged for review by a Northstar support team member.**
+
+The application does not pretend that automated responses were written by a human when they were not.
 
 ---
 
-# 15. HUMAN ESCALATION
+# 📊 Support Operations Dashboard
 
-The system must include clear escalation rules.
+The MVP includes a lightweight support/operations dashboard.
 
-Escalate to human support when:
-
-* Order data cannot be confidently matched.
-* A customer disputes information.
-* A refund or return falls outside normal rules.
-* The system detects contradictory information.
-* A query contains unusual patterns.
-* The automated system has low confidence.
-* The request involves an exception requiring human judgment.
-
-The user must receive a transparent message explaining that the case requires further review.
-
-Example:
-
-> We couldn't confidently resolve this request automatically. Your query has been flagged for review by a Northstar support team member.
-
-Do not pretend automation is a human agent.
-
----
-
-# 16. EMAIL AND AUTOMATION ARCHITECTURE
-
-Structure the application for future integration with:
-
-**Lovable → Backend/API → n8n → AI Processing → Data Lookup → Email Service**
-
-Primary workflow:
-
-**Customer**
-
-↓
-
-**Northstar Website**
-
-↓
-
-**Ask Northstar Query Form**
-
-↓
-
-**POST /api/customer-query**
-
-↓
-
-**Webhook**
-
-↓
-
-**n8n**
-
-↓
-
-**Validate and Classify Query**
-
-↓
-
-**Retrieve Mock or Future Live Data**
-
-↓
-
-**Generate Responsible Response**
-
-↓
-
-**Apply Guardrails and Escalation Rules**
-
-↓
-
-**Create Email**
-
-↓
-
-**Send Email**
-
-↓
-
-**Return Success Status**
-
-The submitted email address must be used only as the intended destination for the response and should not be publicly displayed.
-
----
-
-# 17. API DESIGN
-
-Create a clear integration point:
-
-```text
-POST /api/customer-query
-```
-
-The frontend should submit data conceptually equivalent to:
-
-```json
-{
-  "name": "Alex Johnson",
-  "email": "alex@example.com",
-  "queryType": "Order Status",
-  "orderNumber": "NS-2026-10482",
-  "question": "Where is my order?",
-  "timestamp": "2026-08-13T12:00:00Z",
-  "referenceNumber": "NSQ-2026-10482"
-}
-```
-
-Requirements:
-
-* Do not hardcode credentials.
-* Do not expose API keys.
-* Use environment variables.
-* Support a configurable:
-
-```text
-N8N_WEBHOOK_URL
-```
-
-If no webhook is configured, the application must fall back to realistic mock responses.
-
----
-
-# 18. EMAIL RESPONSE TEMPLATE
-
-Create a professional response format.
-
-**Subject:**
-
-Northstar Retail Co. — Response to Your Query
-
-**Body:**
-
-Hi [Customer Name],
-
-Thank you for contacting Northstar Retail Co.
-
-We've received your query:
-
-> [Customer Question]
-
-### Our Response
-
-[Automated or human-reviewed response]
-
-If you need additional assistance, you may reply to this message.
-
-Kind regards,
-
-**Northstar Retail Co. Customer Support**
-
-**Quality Finds. Delivered.**
-
-If a query is escalated, the response must clearly indicate that a human review is required.
-
----
-
-# 19. SUPPORT AND OPERATIONS DASHBOARD
-
-Create a lightweight internal dashboard demonstrating the operational value of the MVP.
-
-Display:
-
-## Key Metrics
+### Key Metrics
 
 * Total queries
 * Automatically resolved queries
@@ -790,20 +480,18 @@ Display:
 * Queries by ticket type
 * Recent activity
 
-## Query Table
+### Query Information
 
-Include:
+The dashboard can display:
 
 * Reference number
 * Query type
 * Status
 * Automation result
-* Escalated or resolved
+* Escalation/resolution state
 * Timestamp
 
-Do not expose unnecessary personal information in dashboard demonstrations.
-
-Include statuses such as:
+Possible statuses include:
 
 * Received
 * Processing
@@ -811,19 +499,13 @@ Include statuses such as:
 * Escalated
 * Closed
 
-The dashboard should demonstrate how Northstar can measure support deflection.
+The dashboard demonstrates how Northstar could monitor the operational impact of support automation.
 
 ---
 
-# 20. CUSTOMER ACCOUNT PAGE
+# 👤 Customer Account
 
-Create a prototype account page.
-
-Display:
-
-# Welcome back, Alex
-
-Include:
+The prototype account experience includes:
 
 * Recent Orders
 * Wishlist
@@ -831,7 +513,7 @@ Include:
 * Saved Addresses
 * Customer Queries
 
-Example query:
+Example:
 
 **NSQ-2026-10482**
 
@@ -839,40 +521,28 @@ Status:
 
 **Answered**
 
-Subject:
-
-**Product Recommendation**
-
 ---
 
-# 21. DEALS PAGE
+# 🔥 Deals
 
-Create a dedicated deals page.
-
-Headline:
-
-# Big Deals. Better Shopping.
-
-Display discounted products with:
+A dedicated deals experience highlights discounted products with:
 
 * Original price
 * Sale price
 * Discount percentage
-* Add to Cart
-
----
-
-# 22. ABOUT PAGE
+* Add-to-cart functionality
 
 Headline:
 
-# Built Around Better Shopping
+> **Big Deals. Better Shopping.**
 
-Description:
+---
 
-**Northstar Retail Co. is a modern online retailer focused on bringing quality products, great value, and a simple shopping experience to customers.**
+# ℹ️ About Northstar
 
-Create three sections:
+### Built Around Better Shopping
+
+Northstar Retail Co. is a modern online retailer focused on bringing quality products, great value, and a simple shopping experience to customers.
 
 ### Quality
 
@@ -888,37 +558,54 @@ A simple experience from product discovery to delivery.
 
 ---
 
-# 23. RESPONSIVE DESIGN
+# 📱 Responsive Design
 
-The application must work well on:
+The application is designed for:
 
 * Desktop
 * Laptop
 * Tablet
 * Mobile
 
-On mobile include:
+Responsive considerations include:
 
-* Hamburger navigation
-* Two-column product grid where appropriate
-* Full-width forms
-* Mobile-friendly checkout
-* Accessible Ask Northstar form
-* Sticky shopping actions where useful
+* Mobile navigation
+* Hamburger menu
+* Responsive product grids
+* Mobile-friendly forms
+* Accessible Ask Northstar experience
+* Mobile checkout
+* Clear interaction states
 
-Prioritize accessibility, readability, and clear interaction states.
+Accessibility, readability, and usability are prioritized throughout the experience.
 
 ---
 
-# 24. RESPONSIBLE AI AND GOVERNANCE REQUIREMENTS
+# 🧠 Responsible AI Approach
 
-Ground the Support Deflection MVP in the following governance frameworks.
+Although this is an MVP and uses prototype/mock data, the project is designed around responsible automation principles.
 
-These frameworks must influence actual system behavior, interface decisions, documentation, and operational controls rather than appearing only as decorative documentation.
+The system prioritizes:
 
-## ETHICS Framework
+* Transparency
+* Human oversight
+* Data minimization
+* Privacy awareness
+* Explainability
+* Escalation
+* Auditability
+* Responsible automation
+* Testing and review
 
-Apply:
+Automation should assist customer support rather than remove human judgment from situations where human intervention is necessary.
+
+---
+
+# 🛡️ Governance Frameworks
+
+The project considers the following governance frameworks in its design and documentation.
+
+## ETHICS
 
 * Empathy
 * Transparency
@@ -926,13 +613,7 @@ Apply:
 * Ownership and mitigation
 * Sovereignty
 
-The system should communicate clearly, avoid deceptive automation, and provide accountability for errors.
-
----
-
-## TRACK Framework
-
-Implement or document:
+## TRACK
 
 * Training/data awareness
 * Representation
@@ -940,13 +621,7 @@ Implement or document:
 * Counterfactual testing
 * Kill switch
 
-Include a mechanism or documented procedure to disable automated responses if harmful or incorrect behavior is detected.
-
----
-
-## OASIS Protocol
-
-Apply:
+## OASIS
 
 * Opt-in and appropriate consent
 * Mitigation
@@ -955,27 +630,15 @@ Apply:
 * Intentionality
 * Security
 
-Collect only the minimum information required for the support workflow.
-
----
-
-## PRIDE Loop
-
-Incorporate:
+## PRIDE
 
 * Pause points
 * Review cadence
 * Interpretability
 * Disagreement handling
-* Appropriate stakeholder or expert review
+* Expert/stakeholder review
 
-The system should support review rather than assuming every automated answer is correct.
-
----
-
-## HORIZON Scan
-
-Consider:
+## HORIZON
 
 * Historical harm
 * Opportunity cost
@@ -983,29 +646,17 @@ Consider:
 * Intergenerational impacts
 * Zero-sum outcomes
 * Open futures
-* Non-human considerations where relevant
+* Non-human considerations
 
-Document foreseeable impacts of automating customer support.
-
----
-
-## TRAIL Framework
-
-Consider:
+## TRAIL
 
 * Transient data
 * Relational context
 * Archival decisions
 * Inheritance
-* Land or data sovereignty where relevant
+* Data sovereignty
 
-Document how support data should be retained, reviewed, or deleted in a future production system.
-
----
-
-## CYCLE Engine
-
-Demonstrate:
+## CYCLE
 
 * Capture
 * Yield insights
@@ -1013,44 +664,21 @@ Demonstrate:
 * Loop validation
 * Explain
 
-Use dashboard insights and feedback to show how Northstar could improve the automation over time.
-
----
-
-## RANK Framework
-
-Define:
+## RANK
 
 * Roles
 * Authority
 * Notification
 * Kill switch
 
-Clarify who can:
-
-* Review automation
-* Modify workflows
-* Approve deployment
-* Disable the system
-
----
-
-## HUNT Protocol
-
-Support:
+## HUNT
 
 * Handoff
 * Unified context
-* Negotiation or clarification
+* Negotiation/clarification
 * Termination
 
-When automation cannot confidently resolve a query, hand the case to a human with sufficient context.
-
----
-
-## GUARD Framework
-
-Implement or document:
+## GUARD
 
 * Guardrails
 * Unusual pattern detection
@@ -1058,175 +686,92 @@ Implement or document:
 * Red-team testing
 * Dignity filter
 
-The system should avoid harmful, deceptive, discriminatory, or unnecessarily intrusive responses.
+These frameworks are intended to influence system behavior, review processes, documentation, and operational controls rather than exist only as decorative concepts.
 
 ---
 
-# 25. ONE-WEEK INDUSTRY WORKING SIMULATION
+# 🗓️ One-Week Industry Simulation
 
-Treat this project as a real client engagement completed over one week.
+The project is structured as a simulated one-week client engagement.
 
-## Day 1 — Discovery and Problem Definition
-
-Produce:
-
-* Client problem analysis
-* Ticket-type prioritization
-* User journeys
-* Success criteria
-* Initial system architecture
-* Responsible AI risk assessment
-
----
-
-## Day 2 — Solution and UX Design
-
-Produce:
-
-* Product architecture
-* Wireframe or component plan
-* Data model
-* Automation workflow
-* Human escalation rules
-* Governance and guardrail design
+| Day   | Focus              | Key Outputs                                                              |
+| ----- | ------------------ | ------------------------------------------------------------------------ |
+| Day 1 | Discovery          | Problem analysis, ticket prioritization, user journeys, success criteria |
+| Day 2 | UX & Architecture  | Product architecture, data model, workflows, escalation rules            |
+| Day 3 | E-commerce         | Homepage, catalog, product pages, search, cart, checkout                 |
+| Day 4 | Support Deflection | Ask Northstar, query validation, support resolution, escalation          |
+| Day 5 | Operations         | Dashboard, query logging, metrics, integration readiness                 |
+| Day 6 | Testing            | Functional tests, edge cases, responsible AI review                      |
+| Day 7 | Handover           | Demo, readiness assessment, documentation, final review                  |
 
 ---
 
-## Day 3 — E-Commerce MVP Development
-
-Build:
-
-* Homepage
-* Product catalog
-* Product details
-* Search and filtering
-* Cart
-* Checkout
-* Mock order generation
-
----
-
-## Day 4 — Support Deflection Automation
-
-Build:
-
-* Ask Northstar
-* Query validation
-* Order-status resolution
-* Returns/refund guidance
-* Stock availability support
-* Mock email workflow
-* Escalation handling
-
----
-
-## Day 5 — Dashboard and Integration Readiness
-
-Build:
-
-* Support dashboard
-* Query logging
-* Resolution metrics
-* Webhook/API integration point
-* n8n-ready architecture
-* Environment variable configuration
-
----
-
-## Day 6 — Testing and Responsible AI Review
-
-Perform:
-
-* Functional testing
-* Edge-case testing
-* Red-team testing
-* Incorrect-order lookup tests
-* Ambiguous query tests
-* Escalation tests
-* Privacy and data-minimization review
-* Kill-switch validation
-
----
-
-## Day 7 — Client Handover and Demo
-
-Prepare:
-
-* End-to-end demonstration
-* Go-live readiness note
-* Known limitations
-* Handover requirements
-* Future integration roadmap
-* Collaboration and audit evidence
-* Final governance compliance report
-
----
-
-# 26. REQUIRED ASSESSED DELIVERABLES
-
-The one-week engagement must naturally produce the following three deliverables.
+# 📋 Assessed Deliverables
 
 ## Deliverable 1 — Working Support Deflection MVP
 
-The application must:
+The MVP demonstrates:
 
-* Support at least two priority ticket types.
-* Preferably support all three.
-* Work end-to-end with mock data.
-* Demonstrate customer query submission.
-* Demonstrate automated resolution.
-* Demonstrate human escalation.
-* Demonstrate email or simulated email response.
-* Demonstrate query logging and monitoring.
+* Customer shopping journey
+* Product discovery
+* Mock checkout
+* Order generation
+* Ask Northstar
+* Order-status support
+* Returns/refund guidance
+* Stock availability
+* Automated prototype responses
+* Human escalation
+* Query logging
+* Support monitoring
 
 ---
 
-## Deliverable 2 — One-Page Go-Live Readiness Note
+## Deliverable 2 — Go-Live Readiness Note
 
-Create a concise one-page readiness report containing:
+The readiness assessment identifies:
 
 ### What Works
 
-List the completed, tested functionality.
+Completed and tested functionality.
 
-### Known Limitations or Broken Areas
+### Known Limitations
 
-Clearly identify incomplete functionality, assumptions, mock integrations, and prototype limitations.
+Prototype limitations, mock data, assumptions, and incomplete integrations.
 
-### What Northstar Must Take Ownership Of
+### Future Ownership Requirements
 
-Identify work that the client's internal team must complete before production deployment, including:
+Before production deployment, Northstar would need to consider:
 
 * Real order-management integration
 * Real inventory integration
-* Authentication
-* Production email provider
+* Production authentication
+* Production email service
 * Security review
-* Data-retention policy
-* AI model governance
+* Data-retention policies
+* AI governance
 * Monitoring
 * Human support ownership
 * Production testing
 
-Do not hide limitations.
+The project does not claim prototype functionality is production-ready when it is not.
 
 ---
 
-## Deliverable 3 — Collaboration and Audit Trail
+## Deliverable 3 — Collaboration & Audit Trail
 
-Provide evidence that the project was genuinely collaborative.
+The GitHub repository provides evidence of project development through:
 
-Include a realistic audit structure demonstrating:
-
-* Meaningful commits or edit history
-* Clear contribution descriptions
-* Feature development history
-* Review points
+* Commits
+* Pull requests where applicable
+* Feature development
 * Testing updates
+* Documentation
 * Governance decisions
-* Issue fixes
+* Bug fixes
+* Team contributions
 
-Example structure:
+Example commit structure:
 
 ```text
 feat: build Ask Northstar query workflow
@@ -1237,64 +782,22 @@ feat: create support operations dashboard
 test: add ambiguous order-number cases
 fix: prevent unsupported refund promises
 docs: add go-live readiness assessment
-docs: record AI governance review
+docs: record responsible AI review
 ```
 
-The audit trail should make it possible for Northstar's procurement team to understand:
+The purpose of the audit trail is to make it possible to understand:
 
 * What changed
 * Why it changed
-* Who or what role contributed
+* Who contributed
 * What was reviewed
 * What remains unresolved
 
 ---
 
-# 27. SEPARATE GOVERNANCE AND CHECKLIST COMPLIANCE REPORT
+# 🧪 Testing
 
-Generate a separate report titled:
-
-# Northstar Support Deflection MVP — Responsible AI and Delivery Compliance Report
-
-The report must confirm how the provided:
-
-* AI principles
-* ETHICS framework
-* TRACK framework
-* OASIS protocol
-* PRIDE loop
-* HORIZON scan
-* TRAIL framework
-* CYCLE engine
-* RANK framework
-* HUNT protocol
-* GUARD framework
-
-were applied.
-
-Also review the attached screenshot titled **Checklist** and map every checklist requirement to one of the following:
-
-* Implemented
-* Partially Implemented
-* Not Implemented
-* Not Applicable
-
-For every item, provide:
-
-1. Requirement
-2. Implementation evidence
-3. Relevant feature or file
-4. Test or validation method
-5. Status
-6. Remaining risk or mitigation
-
-Do not claim compliance without evidence.
-
----
-
-# 28. TESTING REQUIREMENTS
-
-Test the following scenarios.
+The project should be evaluated using both successful and failure scenarios.
 
 ## Happy Paths
 
@@ -1304,32 +807,30 @@ Test the following scenarios.
 * Valid stock query
 * Product recommendation
 * Successful query submission
-* Successful mock email response
+* Successful prototype response
 
-## Failure and Edge Cases
+## Edge Cases
 
 * Invalid order number
 * Missing customer information
 * Invalid email
 * Ambiguous product name
-* Out-of-stock item
+* Out-of-stock product
 * Contradictory mock data
 * Unknown query type
 * Low-confidence response
-* Webhook unavailable
-* Automation kill switch enabled
-
-Document expected behavior for each case.
+* Automation failure
+* Human escalation
 
 ---
 
-# 29. PROTOTYPE BOUNDARIES
+# 🚧 Prototype Boundaries
 
-This is a high-fidelity MVP, not a production deployment.
+This project is a **high-fidelity MVP/prototype**, not a production e-commerce platform.
 
-Use realistic mock data where external systems are unavailable.
+The current implementation uses realistic mock data where real business systems are unavailable.
 
-Do not require:
+The prototype does **not** require:
 
 * Real payment processing
 * Real inventory APIs
@@ -1337,148 +838,215 @@ Do not require:
 * Production authentication
 * Production AI credentials
 * Production order-management integration
+* Production email infrastructure
 
-However, the architecture must make future integration straightforward.
+No real payment transactions are processed.
 
-Never hardcode:
-
-* API keys
-* Email credentials
-* Secrets
-* Webhook secrets
-
-Use environment variables and configuration placeholders.
+No production credentials should be stored in the repository.
 
 ---
 
-# 30. SUCCESS CRITERIA
+# 🔮 Future Integration
 
-The final solution is successful if a stakeholder can clearly demonstrate:
+The current MVP is intentionally focused on a **Lovable-based implementation**.
 
-### Customer Experience
+Future production architecture could integrate external services when required, for example:
 
-A customer can:
+```text
+Northstar Website
+       ↓
+Production API
+       ↓
+Order / Product / Inventory Systems
+       ↓
+AI Support Processing
+       ↓
+Email / Notification Service
+       ↓
+Customer
+```
+
+External automation platforms such as n8n are **not part of the current MVP implementation**.
+
+They may be considered in a future production architecture if Northstar requires them.
+
+---
+
+# 💻 Technology Stack
+
+The current project uses:
+
+* **Lovable** — Application development and AI-assisted implementation
+* **React** — Frontend application framework
+* **TypeScript** — Application programming language
+* **GitHub** — Source control and team collaboration
+* **Vercel** — Planned/target deployment platform
+
+The exact implementation may evolve as the MVP develops.
+
+---
+
+# 🤝 Team & Collaboration
+
+This is a **collaborative team project**.
+
+All designated team members are recognized as **Project Leads / Co-Leads**.
+
+Each team member is responsible for meaningful participation in the planning, development, testing, documentation, review, or delivery of the MVP.
+
+### Project Leads
+
+| Team Member         | Role                   |
+| ------------------- | ---------------------- |
+| **Faith Audisa**    | Project Lead / Co-Lead |
+| **[Team Member 2]** | Project Lead / Co-Lead |
+| **[Team Member 3]** | Project Lead / Co-Lead |
+| **[Team Member 4]** | Project Lead / Co-Lead |
+
+> Replace the placeholder names above with the actual GitHub usernames/names of the team members before submission.
+
+### Collaboration Model
+
+The team uses GitHub to support:
+
+* Source-code management
+* Collaboration
+* Contribution tracking
+* Feature development
+* Documentation
+* Testing
+* Project review
+
+Where appropriate, contributors may work through branches and pull requests before changes are merged into the main project.
+
+---
+
+# 🔗 Lovable & GitHub
+
+This project was developed using **Lovable** and synchronized with GitHub.
+
+The initial project structure and automated synchronization may contain commits created through Lovable's GitHub integration.
+
+Subsequent human contributions are represented through the individual GitHub accounts of the team members.
+
+This repository therefore provides a transparent development history showing the transition from the initial Lovable-generated project to collaborative team development.
+
+---
+
+# 🚀 Development
+
+The project can be developed through Lovable or locally using Node.js and npm.
+
+### Clone the Repository
+
+```bash
+git clone <repository-url>
+cd northstar-helper-bot
+```
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Start Development Server
+
+```bash
+npm run dev
+```
+
+The exact commands may vary depending on the project's current configuration.
+
+---
+
+# 🌐 Deployment
+
+The project is intended to be deployed using **Vercel**.
+
+Recommended deployment flow:
+
+```text
+Lovable
+   ↓
+GitHub
+   ↓
+Vercel
+   ↓
+Live Northstar Application
+```
+
+Future changes can be synchronized through GitHub and deployed through the connected Vercel project.
+
+---
+
+# 🔐 Security & Privacy
+
+The project follows basic security principles appropriate for an MVP:
+
+* Do not commit API keys.
+* Do not commit passwords.
+* Do not expose secrets.
+* Do not process real payment information.
+* Do not publicly expose unnecessary customer information.
+* Use environment variables for future credentials.
+* Use mock data for demonstration purposes.
+
+Before production deployment, a complete security and privacy review would be required.
+
+---
+
+# ✅ Success Criteria
+
+The MVP is successful if a stakeholder can demonstrate that a customer can:
 
 1. Browse products.
 2. Search and filter products.
-3. Add products to a cart.
-4. Complete a mock checkout.
-5. Receive a mock order number.
-6. Ask Northstar a support question.
-7. Receive an automated or simulated response.
-8. Understand when human support is required.
+3. View product details.
+4. Add products to a cart.
+5. Complete a mock checkout.
+6. Receive a mock order number.
+7. Ask Northstar a support question.
+8. Receive an automated prototype response.
+9. Understand when human support is required.
+10. Have the support interaction reflected in the operations experience.
 
-### Business Value
-
-Northstar can demonstrate that repetitive tickets can be automatically handled or meaningfully deflected.
-
-### Technical Value
-
-The system has a clean, reusable architecture ready for:
-
-**Frontend → API → n8n → AI → Order/Product Systems → Email**
-
-### Operational Value
-
-Northstar can:
-
-* Monitor queries.
-* Measure automation outcomes.
-* Identify escalations.
-* Review failures.
-* Disable automation when necessary.
-
-### Responsible AI Value
-
-The system demonstrates:
-
-* Transparency
-* Human oversight
-* Data minimization
-* Privacy awareness
-* Auditability
-* Escalation
-* Kill-switch capability
-* Testing for unusual and harmful outcomes
+The business value is demonstrated by showing how repetitive support questions can be **deflected, resolved, monitored, and escalated responsibly**.
 
 ---
 
-# 31. FINAL BUILD INSTRUCTION
+# 🏆 Final Outcome
 
-Prioritize a **working, polished, demoable product** over unnecessary backend complexity.
+Northstar Helper Bot demonstrates a practical approach to combining:
 
-The most important feature is the **Northstar Support Deflection System**, especially:
+**E-commerce + Customer Support + Automation + Responsible AI + Operational Visibility**
 
-# Ask Northstar
+The MVP is designed to show how Northstar Retail Co. can reduce repetitive manual support work while maintaining:
 
-The system must make this workflow obvious:
+* Customer trust
+* Transparency
+* Human oversight
+* Responsible automation
+* Operational visibility
+* Auditability
+* Future integration readiness
 
-**Customer asks**
+---
 
-↓
+## Project Status
 
-**Northstar receives the query**
+**🚧 Active Development — Northstar Sprint Support Deflection MVP**
 
-↓
+Built collaboratively with **Lovable + GitHub**, with Vercel deployment planned for the live demonstration.
 
-**The query is validated and classified**
+---
 
-↓
+## License
 
-**Relevant product, order, return, or inventory data is checked**
+This project is an educational/prototype project developed for the Northstar Sprint simulation.
 
-↓
+---
 
-**The system generates a guarded response**
+### Built with Lovable
 
-↓
-
-**The query is automatically resolved or escalated to a human**
-
-↓
-
-**The customer receives a response**
-
-↓
-
-**The outcome is logged for operational review**
-
-All major buttons and user journeys must function within the prototype.
-
-Do not leave major pages empty.
-
-Use realistic mock:
-
-* Products
-* Orders
-* Inventory levels
-* Returns
-* Refund statuses
-* Customer queries
-* Automated responses
-* Escalation cases
-
-Build clean, reusable components and organize the codebase so that future production integrations can replace mock services without requiring a complete redesign.
-
-The final outcome should convincingly demonstrate that **Northstar Retail Co. can reduce repetitive manual support work while maintaining transparency, human oversight, responsible automation, operational visibility, and a clear path toward production integration**.
-
-This project was built with [Lovable](https://lovable.dev).
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/13314092-0542-4d12-a1f3-08e1e5a7f94b).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
-```
+> **Northstar Retail Co. — Quality Finds. Delivered.**
