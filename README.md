@@ -1,10 +1,10 @@
-# Northstar Helper Bot
+# Northstar Support AI
 
 # NORTHSTAR SPRINT — SUPPORT DEFLECTION MVP
 
 > **Quality Finds. Delivered.**
 
-Northstar Helper Bot is a collaborative, high-fidelity **Support Deflection MVP** built for **Northstar Retail Co.**, a fictional mid-sized e-commerce company whose customer-support team is overwhelmed by repetitive customer requests.
+Northstar Support AI is a collaborative, high-fidelity **Support Deflection MVP** built for **Northstar Retail Co.**, a fictional mid-sized e-commerce company whose customer-support team is overwhelmed by repetitive customer requests.
 
 The project demonstrates how a modern e-commerce experience can combine shopping functionality with an **AI-ready customer support assistant, automated support workflows, responsible escalation, and operational visibility**.
 
@@ -903,7 +903,6 @@ Each team member is responsible for meaningful participation in the planning, de
 | **[Team Member 3]** | Project Lead / Co-Lead |
 | **[Team Member 4]** | Project Lead / Co-Lead |
 
-> Replace the placeholder names above with the actual GitHub usernames/names of the team members before submission.
 
 ### Collaboration Model
 
