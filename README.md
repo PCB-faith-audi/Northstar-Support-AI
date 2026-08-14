@@ -900,7 +900,7 @@ Each team member is responsible for meaningful participation in the planning, de
 | ------------------- | ---------------------- |
 | **Faith Audisa**    | Project Lead / Co-Lead |
 | **Austin Tlhako** | Project Lead / Co-Lead |
-| **[Team Member 3]** | Project Lead / Co-Lead |
+| **[Eva Mbuni]** | Project Lead / Co-Lead |
 | **[Team Member 4]** | Project Lead / Co-Lead |
 | **[Team Member 5]** | Project Lead / Co-Lead |
 
