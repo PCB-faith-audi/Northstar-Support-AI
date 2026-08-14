@@ -962,7 +962,7 @@ The exact commands may vary depending on the project's current configuration.
 
 # 🌐 Deployment
 
-The project is intended to be deployed using **Vercel**.
+The project is intended to be deployed using **Vercel**
 
 Recommended deployment flow:
 
