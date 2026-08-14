@@ -896,13 +896,13 @@ Each team member is responsible for meaningful participation in the planning, de
 
 ### Project Leads
 
-| Team Member         | Role                   |
-| ------------------- | ---------------------- |
-| **Faith Audisa**    | Project Lead / Co-Lead |
-| **Austin Tlhako** | Project Lead / Co-Lead |
-| **[Eva Mbuni]** | Project Lead / Co-Lead |
-| **[Team Member 4]** | Project Lead / Co-Lead |
-| **[Team Member 5]** | Project Lead / Co-Lead |
+| Team Member         |       Role                   |
+| ------------------- |       ---------------------- |
+| **Rose Athulon**    |       Project Lead / Co-Lead |
+| **Austin Tlhako**   |       Project Lead / Co-Lead |
+| **Eva Mbuni**       |       Project Lead / Co-Lead |
+| **Mohamed Issack**  |       Project Lead / Co-Lead |
+| **Faith Audisa**    |       Project Lead / Co-Lead |
 
 
 ### Collaboration Model
