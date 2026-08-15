@@ -9,6 +9,8 @@ import { ProductCard, StockPill } from "@/components/northstar/product-card";
 import { findProductBySlug, formatPrice, relatedProducts } from "@/lib/northstar/data";
 import { useStore } from "@/lib/northstar/store";
 import { cn } from "@/lib/utils";
+import { Breadcrumbs } from "@/components/northstar/breadcrumbs";
+import { categorySlug } from "@/lib/northstar/categories";
 
 export const Route = createFileRoute("/product/$slug")({
   loader: ({ params }) => {
@@ -58,16 +60,17 @@ function ProductDetail() {
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6">
-      <nav className="mb-6 text-sm text-muted-foreground">
-        <Link to="/" className="hover:text-foreground">
-          Home
-        </Link>{" "}
-        /{" "}
-        <Link to="/shop" className="hover:text-foreground">
-          Shop
-        </Link>{" "}
-        / <span className="text-foreground">{product.name}</span>
-      </nav>
+      <Breadcrumbs
+        items={[
+          { label: "Shop", to: "/shop" },
+          {
+            label: product.category,
+            to: "/category/$slug",
+            params: { slug: categorySlug(product.category) },
+          },
+          { label: product.name },
+        ]}
+      />
 
       <div className="grid gap-10 lg:grid-cols-2">
         <div>

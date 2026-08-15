@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/select";
 import { ProductCard } from "@/components/northstar/product-card";
 import { CATEGORIES, PRODUCTS, type Category } from "@/lib/northstar/data";
+import { Breadcrumbs } from "@/components/northstar/breadcrumbs";
 
 interface ShopSearch {
   q?: string;
@@ -92,7 +93,8 @@ function Shop() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6">
       <header className="mb-8">
-        <h1 className="text-3xl font-bold sm:text-4xl">Shop</h1>
+        <Breadcrumbs items={[{ label: "Shop" }]} />
+        <h1 className="mt-4 text-3xl font-bold sm:text-4xl">Shop</h1>
         <p className="mt-2 text-muted-foreground">
           {PRODUCTS.length} products · inventory shared with the Ask Northstar support engine.
         </p>

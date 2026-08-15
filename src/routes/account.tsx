@@ -7,6 +7,7 @@ import { Separator } from "@/components/ui/separator";
 import { ORDERS, PRODUCTS, formatPrice } from "@/lib/northstar/data";
 import { useStore } from "@/lib/northstar/store";
 import { cn } from "@/lib/utils";
+import { Breadcrumbs } from "@/components/northstar/breadcrumbs";
 
 export const Route = createFileRoute("/account")({
   head: () => ({
@@ -35,7 +36,8 @@ function Account() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
       <header>
-        <h1 className="text-3xl font-bold sm:text-4xl">Welcome back, {DEMO_CUSTOMER.name}</h1>
+        <Breadcrumbs items={[{ label: "Account" }]} />
+        <h1 className="mt-4 text-3xl font-bold sm:text-4xl">Welcome back, {DEMO_CUSTOMER.name}</h1>
         <p className="mt-2 text-muted-foreground">
           Prototype account view — signed in as a demo customer. No real authentication is in place.
         </p>

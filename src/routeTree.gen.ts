@@ -14,11 +14,23 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as AccountRouteImport } from './routes/account'
 import { Route as AskRouteImport } from './routes/ask'
 import { Route as CartRouteImport } from './routes/cart'
+import { Route as CategoriesRouteImport } from './routes/categories'
 import { Route as CheckoutRouteImport } from './routes/checkout'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as DashboardRouteImport } from './routes/dashboard'
 import { Route as DealsRouteImport } from './routes/deals'
 import { Route as GovernanceRouteImport } from './routes/governance'
+import { Route as NewArrivalsRouteImport } from './routes/new-arrivals'
+import { Route as OrdersRouteImport } from './routes/orders'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as ReturnsRouteImport } from './routes/returns'
+import { Route as SearchRouteImport } from './routes/search'
+import { Route as ShippingRouteImport } from './routes/shipping'
 import { Route as ShopRouteImport } from './routes/shop'
+import { Route as TermsRouteImport } from './routes/terms'
+import { Route as TrackRouteImport } from './routes/track'
+import { Route as WishlistRouteImport } from './routes/wishlist'
+import { Route as CategorySlugRouteImport } from './routes/category.$slug'
 import { Route as OrderConfirmedOrderIdRouteImport } from './routes/order-confirmed.$orderId'
 import { Route as ProductSlugRouteImport } from './routes/product.$slug'
 import { Route as ApiPublicCustomerQueryRouteImport } from './routes/api/public/customer-query'
@@ -48,9 +60,19 @@ const CartRoute = CartRouteImport.update({
   path: '/cart',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CategoriesRoute = CategoriesRouteImport.update({
+  id: '/categories',
+  path: '/categories',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CheckoutRoute = CheckoutRouteImport.update({
   id: '/checkout',
   path: '/checkout',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DashboardRoute = DashboardRouteImport.update({
@@ -68,9 +90,59 @@ const GovernanceRoute = GovernanceRouteImport.update({
   path: '/governance',
   getParentRoute: () => rootRouteImport,
 } as any)
+const NewArrivalsRoute = NewArrivalsRouteImport.update({
+  id: '/new-arrivals',
+  path: '/new-arrivals',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OrdersRoute = OrdersRouteImport.update({
+  id: '/orders',
+  path: '/orders',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReturnsRoute = ReturnsRouteImport.update({
+  id: '/returns',
+  path: '/returns',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SearchRoute = SearchRouteImport.update({
+  id: '/search',
+  path: '/search',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShippingRoute = ShippingRouteImport.update({
+  id: '/shipping',
+  path: '/shipping',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ShopRoute = ShopRouteImport.update({
   id: '/shop',
   path: '/shop',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TrackRoute = TrackRouteImport.update({
+  id: '/track',
+  path: '/track',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WishlistRoute = WishlistRouteImport.update({
+  id: '/wishlist',
+  path: '/wishlist',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CategorySlugRoute = CategorySlugRouteImport.update({
+  id: '/category/$slug',
+  path: '/category/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
 const OrderConfirmedOrderIdRoute = OrderConfirmedOrderIdRouteImport.update({
@@ -95,11 +167,23 @@ export interface FileRoutesByFullPath {
   '/account': typeof AccountRoute
   '/ask': typeof AskRoute
   '/cart': typeof CartRoute
+  '/categories': typeof CategoriesRoute
   '/checkout': typeof CheckoutRoute
+  '/contact': typeof ContactRoute
   '/dashboard': typeof DashboardRoute
   '/deals': typeof DealsRoute
   '/governance': typeof GovernanceRoute
+  '/new-arrivals': typeof NewArrivalsRoute
+  '/orders': typeof OrdersRoute
+  '/privacy': typeof PrivacyRoute
+  '/returns': typeof ReturnsRoute
+  '/search': typeof SearchRoute
+  '/shipping': typeof ShippingRoute
   '/shop': typeof ShopRoute
+  '/terms': typeof TermsRoute
+  '/track': typeof TrackRoute
+  '/wishlist': typeof WishlistRoute
+  '/category/$slug': typeof CategorySlugRoute
   '/order-confirmed/$orderId': typeof OrderConfirmedOrderIdRoute
   '/product/$slug': typeof ProductSlugRoute
   '/api/public/customer-query': typeof ApiPublicCustomerQueryRoute
@@ -110,11 +194,23 @@ export interface FileRoutesByTo {
   '/account': typeof AccountRoute
   '/ask': typeof AskRoute
   '/cart': typeof CartRoute
+  '/categories': typeof CategoriesRoute
   '/checkout': typeof CheckoutRoute
+  '/contact': typeof ContactRoute
   '/dashboard': typeof DashboardRoute
   '/deals': typeof DealsRoute
   '/governance': typeof GovernanceRoute
+  '/new-arrivals': typeof NewArrivalsRoute
+  '/orders': typeof OrdersRoute
+  '/privacy': typeof PrivacyRoute
+  '/returns': typeof ReturnsRoute
+  '/search': typeof SearchRoute
+  '/shipping': typeof ShippingRoute
   '/shop': typeof ShopRoute
+  '/terms': typeof TermsRoute
+  '/track': typeof TrackRoute
+  '/wishlist': typeof WishlistRoute
+  '/category/$slug': typeof CategorySlugRoute
   '/order-confirmed/$orderId': typeof OrderConfirmedOrderIdRoute
   '/product/$slug': typeof ProductSlugRoute
   '/api/public/customer-query': typeof ApiPublicCustomerQueryRoute
@@ -126,11 +222,23 @@ export interface FileRoutesById {
   '/account': typeof AccountRoute
   '/ask': typeof AskRoute
   '/cart': typeof CartRoute
+  '/categories': typeof CategoriesRoute
   '/checkout': typeof CheckoutRoute
+  '/contact': typeof ContactRoute
   '/dashboard': typeof DashboardRoute
   '/deals': typeof DealsRoute
   '/governance': typeof GovernanceRoute
+  '/new-arrivals': typeof NewArrivalsRoute
+  '/orders': typeof OrdersRoute
+  '/privacy': typeof PrivacyRoute
+  '/returns': typeof ReturnsRoute
+  '/search': typeof SearchRoute
+  '/shipping': typeof ShippingRoute
   '/shop': typeof ShopRoute
+  '/terms': typeof TermsRoute
+  '/track': typeof TrackRoute
+  '/wishlist': typeof WishlistRoute
+  '/category/$slug': typeof CategorySlugRoute
   '/order-confirmed/$orderId': typeof OrderConfirmedOrderIdRoute
   '/product/$slug': typeof ProductSlugRoute
   '/api/public/customer-query': typeof ApiPublicCustomerQueryRoute
@@ -143,11 +251,23 @@ export interface FileRouteTypes {
     | '/account'
     | '/ask'
     | '/cart'
+    | '/categories'
     | '/checkout'
+    | '/contact'
     | '/dashboard'
     | '/deals'
     | '/governance'
+    | '/new-arrivals'
+    | '/orders'
+    | '/privacy'
+    | '/returns'
+    | '/search'
+    | '/shipping'
     | '/shop'
+    | '/terms'
+    | '/track'
+    | '/wishlist'
+    | '/category/$slug'
     | '/order-confirmed/$orderId'
     | '/product/$slug'
     | '/api/public/customer-query'
@@ -158,11 +278,23 @@ export interface FileRouteTypes {
     | '/account'
     | '/ask'
     | '/cart'
+    | '/categories'
     | '/checkout'
+    | '/contact'
     | '/dashboard'
     | '/deals'
     | '/governance'
+    | '/new-arrivals'
+    | '/orders'
+    | '/privacy'
+    | '/returns'
+    | '/search'
+    | '/shipping'
     | '/shop'
+    | '/terms'
+    | '/track'
+    | '/wishlist'
+    | '/category/$slug'
     | '/order-confirmed/$orderId'
     | '/product/$slug'
     | '/api/public/customer-query'
@@ -173,11 +305,23 @@ export interface FileRouteTypes {
     | '/account'
     | '/ask'
     | '/cart'
+    | '/categories'
     | '/checkout'
+    | '/contact'
     | '/dashboard'
     | '/deals'
     | '/governance'
+    | '/new-arrivals'
+    | '/orders'
+    | '/privacy'
+    | '/returns'
+    | '/search'
+    | '/shipping'
     | '/shop'
+    | '/terms'
+    | '/track'
+    | '/wishlist'
+    | '/category/$slug'
     | '/order-confirmed/$orderId'
     | '/product/$slug'
     | '/api/public/customer-query'
@@ -189,11 +333,23 @@ export interface RootRouteChildren {
   AccountRoute: typeof AccountRoute
   AskRoute: typeof AskRoute
   CartRoute: typeof CartRoute
+  CategoriesRoute: typeof CategoriesRoute
   CheckoutRoute: typeof CheckoutRoute
+  ContactRoute: typeof ContactRoute
   DashboardRoute: typeof DashboardRoute
   DealsRoute: typeof DealsRoute
   GovernanceRoute: typeof GovernanceRoute
+  NewArrivalsRoute: typeof NewArrivalsRoute
+  OrdersRoute: typeof OrdersRoute
+  PrivacyRoute: typeof PrivacyRoute
+  ReturnsRoute: typeof ReturnsRoute
+  SearchRoute: typeof SearchRoute
+  ShippingRoute: typeof ShippingRoute
   ShopRoute: typeof ShopRoute
+  TermsRoute: typeof TermsRoute
+  TrackRoute: typeof TrackRoute
+  WishlistRoute: typeof WishlistRoute
+  CategorySlugRoute: typeof CategorySlugRoute
   OrderConfirmedOrderIdRoute: typeof OrderConfirmedOrderIdRoute
   ProductSlugRoute: typeof ProductSlugRoute
   ApiPublicCustomerQueryRoute: typeof ApiPublicCustomerQueryRoute
@@ -236,11 +392,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CartRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/categories': {
+      id: '/categories'
+      path: '/categories'
+      fullPath: '/categories'
+      preLoaderRoute: typeof CategoriesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/checkout': {
       id: '/checkout'
       path: '/checkout'
       fullPath: '/checkout'
       preLoaderRoute: typeof CheckoutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/dashboard': {
@@ -264,11 +434,81 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GovernanceRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/new-arrivals': {
+      id: '/new-arrivals'
+      path: '/new-arrivals'
+      fullPath: '/new-arrivals'
+      preLoaderRoute: typeof NewArrivalsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/orders': {
+      id: '/orders'
+      path: '/orders'
+      fullPath: '/orders'
+      preLoaderRoute: typeof OrdersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/returns': {
+      id: '/returns'
+      path: '/returns'
+      fullPath: '/returns'
+      preLoaderRoute: typeof ReturnsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/search': {
+      id: '/search'
+      path: '/search'
+      fullPath: '/search'
+      preLoaderRoute: typeof SearchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shipping': {
+      id: '/shipping'
+      path: '/shipping'
+      fullPath: '/shipping'
+      preLoaderRoute: typeof ShippingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/shop': {
       id: '/shop'
       path: '/shop'
       fullPath: '/shop'
       preLoaderRoute: typeof ShopRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/track': {
+      id: '/track'
+      path: '/track'
+      fullPath: '/track'
+      preLoaderRoute: typeof TrackRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/wishlist': {
+      id: '/wishlist'
+      path: '/wishlist'
+      fullPath: '/wishlist'
+      preLoaderRoute: typeof WishlistRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/category/$slug': {
+      id: '/category/$slug'
+      path: '/category/$slug'
+      fullPath: '/category/$slug'
+      preLoaderRoute: typeof CategorySlugRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/order-confirmed/$orderId': {
@@ -301,11 +541,23 @@ const rootRouteChildren: RootRouteChildren = {
   AccountRoute: AccountRoute,
   AskRoute: AskRoute,
   CartRoute: CartRoute,
+  CategoriesRoute: CategoriesRoute,
   CheckoutRoute: CheckoutRoute,
+  ContactRoute: ContactRoute,
   DashboardRoute: DashboardRoute,
   DealsRoute: DealsRoute,
   GovernanceRoute: GovernanceRoute,
+  NewArrivalsRoute: NewArrivalsRoute,
+  OrdersRoute: OrdersRoute,
+  PrivacyRoute: PrivacyRoute,
+  ReturnsRoute: ReturnsRoute,
+  SearchRoute: SearchRoute,
+  ShippingRoute: ShippingRoute,
   ShopRoute: ShopRoute,
+  TermsRoute: TermsRoute,
+  TrackRoute: TrackRoute,
+  WishlistRoute: WishlistRoute,
+  CategorySlugRoute: CategorySlugRoute,
   OrderConfirmedOrderIdRoute: OrderConfirmedOrderIdRoute,
   ProductSlugRoute: ProductSlugRoute,
   ApiPublicCustomerQueryRoute: ApiPublicCustomerQueryRoute,

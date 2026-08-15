@@ -26,6 +26,7 @@ import { Separator } from "@/components/ui/separator";
 import { QUERY_TYPES, makeReference, type SupportQuery } from "@/lib/northstar/deflection";
 import { useStore } from "@/lib/northstar/store";
 import { cn } from "@/lib/utils";
+import { Breadcrumbs } from "@/components/northstar/breadcrumbs";
 
 interface AskSearch {
   order?: string;
@@ -178,6 +179,7 @@ function Ask() {
           <span className="inline-flex items-center gap-2 rounded-full bg-primary-foreground/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-accent">
             <Bot className="h-3.5 w-3.5" /> Automated support assistant
           </span>
+          <Breadcrumbs tone="dark" items={[{ label: "Customer service", to: "/contact" }, { label: "Ask Northstar" }]} />
           <h1 className="mt-4 text-3xl font-extrabold sm:text-5xl">Ask Northstar</h1>
           <p className="mt-4 max-w-2xl text-primary-foreground/80">
             Have a question about a product, order, delivery, return, refund, or availability? Send
