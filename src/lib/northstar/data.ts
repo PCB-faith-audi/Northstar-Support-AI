@@ -403,14 +403,11 @@ export const RETURNS_POLICY = {
   portalPath: "/account",
 } as const;
 
-const currency = new Intl.NumberFormat("en-ZA", {
-  style: "currency",
-  currency: "ZAR",
-  maximumFractionDigits: 0,
-});
-
+/** Deterministic ZAR formatting — avoids SSR/client Intl locale mismatches. */
 export function formatPrice(value: number): string {
-  return currency.format(value);
+  const rounded = Math.round(value);
+  const grouped = String(Math.abs(rounded)).replace(/\B(?=(\d{3})+(?!\d))/g, "\u00a0");
+  return `${rounded < 0 ? "-" : ""}R\u00a0${grouped}`;
 }
 
 export function findProductBySlug(slug: string): Product | undefined {
