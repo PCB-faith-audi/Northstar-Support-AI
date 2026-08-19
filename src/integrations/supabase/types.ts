@@ -14,7 +14,129 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      orders: {
+        Row: {
+          carrier: string
+          created_at: string
+          customer_name: string
+          data_conflict: string | null
+          delivery_method: string
+          email: string
+          estimated_delivery: string
+          id: string
+          items: Json
+          placed_at: string
+          refund_status: string
+          return_window_days: number
+          status: string
+          total: number
+          tracking_ref: string
+        }
+        Insert: {
+          carrier: string
+          created_at?: string
+          customer_name: string
+          data_conflict?: string | null
+          delivery_method: string
+          email: string
+          estimated_delivery: string
+          id: string
+          items?: Json
+          placed_at: string
+          refund_status?: string
+          return_window_days?: number
+          status: string
+          total: number
+          tracking_ref: string
+        }
+        Update: {
+          carrier?: string
+          created_at?: string
+          customer_name?: string
+          data_conflict?: string | null
+          delivery_method?: string
+          email?: string
+          estimated_delivery?: string
+          id?: string
+          items?: Json
+          placed_at?: string
+          refund_status?: string
+          return_window_days?: number
+          status?: string
+          total?: number
+          tracking_ref?: string
+        }
+        Relationships: []
+      }
+      products: {
+        Row: {
+          category: string
+          created_at: string
+          description: string
+          id: string
+          image_key: string
+          name: string
+          original_price: number | null
+          price: number
+          rating: number
+          restock_date: string | null
+          reviews: number
+          short_description: string
+          slug: string
+          sort_order: number
+          specs: Json
+          stock_count: number
+          stock_status: string
+          tags: Json
+          variant_label: string | null
+          variants: Json | null
+        }
+        Insert: {
+          category: string
+          created_at?: string
+          description?: string
+          id: string
+          image_key: string
+          name: string
+          original_price?: number | null
+          price: number
+          rating?: number
+          restock_date?: string | null
+          reviews?: number
+          short_description?: string
+          slug: string
+          sort_order?: number
+          specs?: Json
+          stock_count?: number
+          stock_status: string
+          tags?: Json
+          variant_label?: string | null
+          variants?: Json | null
+        }
+        Update: {
+          category?: string
+          created_at?: string
+          description?: string
+          id?: string
+          image_key?: string
+          name?: string
+          original_price?: number | null
+          price?: number
+          rating?: number
+          restock_date?: string | null
+          reviews?: number
+          short_description?: string
+          slug?: string
+          sort_order?: number
+          specs?: Json
+          stock_count?: number
+          stock_status?: string
+          tags?: Json
+          variant_label?: string | null
+          variants?: Json | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
